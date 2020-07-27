@@ -11,6 +11,7 @@
     "body-parser": "^1.19.0",
     "cloudinary": "^1.22.0",
     "compression": "^1.7.4",
+    "concurrently": "^5.2.0",
     "cookie-parser": "^1.4.5",
     "express": "^4.17.1",
     "googleapis": "^52.1.0",
@@ -42,8 +43,9 @@
   },
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
-    "start:dev": "nodemon src/index.ts",
+    "start:dev": "concurrently \"nodemon src/index.ts\" \"npm run client ",
     "start:prod": "node index.js",
+    "client": "cd src/client/ && npm run start",
     "build": "tsc -p ./",
     "seed": "ts-node temp/seed.ts",
     "clear": "ts-node temp/clear.ts"
