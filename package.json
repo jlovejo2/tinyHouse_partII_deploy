@@ -44,7 +44,7 @@
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "start:dev": "concurrently \"nodemon index.ts\" \"npm run client ",
-    "start:prod": "node index.js",
+    "start:prod": "node build/index.js",
     "client": "cd client/ && npm run start",
     "build": "concurrently \" tsc -p ./\" \" cd client && npm run build",
     "postinstall": "npm run build",
