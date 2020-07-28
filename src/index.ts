@@ -25,10 +25,12 @@ const mount = async (app: Application) => {
 
   //express method for serving static files
   if (process.env.NODE_ENV === "production") {
-    app.use(express.static(`${__dirname}/client`));
+    app.use(express.static(`${__dirname}/src/client/build`));
   }
   //tells every route user enters to serve same index.html file
-  app.get("/*", (_req, res) => res.sendFile(`${__dirname}/client/index.html`));
+  app.get("/*", (_req, res) =>
+    res.sendFile(`${__dirname}/client/build/index.html`)
+  );
   //creating instance of ApolloServer
   //passing in options needed to instantiate the apolloServer instance
   //ApolloSever expects an existing schema or object with typeDefs and resolvers to be passed into it
