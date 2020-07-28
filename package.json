@@ -47,7 +47,7 @@
     "start:dev": "concurrently \"nodemon index.ts\" \"npm run client ",
     "start:prod": "node build/index.js",
     "client": "cd client/ && npm run start",
-    "build": "concurrently \" tsc -p ./\" \" cd client && npm run build",
+    "build": "concurrently \"tsc -p ./\" \"cd client && npm run build\"",
     "postinstall": "npm run build",
     "seed": "ts-node temp/seed.ts",
     "clear": "ts-node temp/clear.ts"
