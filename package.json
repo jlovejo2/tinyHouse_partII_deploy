@@ -47,8 +47,9 @@
     "start:dev": "concurrently \"nodemon index.ts\" \"npm run client ",
     "start:prod": "node build/index.js",
     "client": "cd client/ && npm run start",
-    "build": "tsc -p ./",
-    "heroku-postbuild": "cd client && npm run build",
+    "build": "cd client && npm run build",
+    "postinstall": "tsc -p ./",
+    "heroku-postbuild": "npm run build",
     "seed": "ts-node temp/seed.ts",
     "clear": "ts-node temp/clear.ts"
   },
