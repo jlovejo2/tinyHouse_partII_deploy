@@ -6,12 +6,13 @@
     //refers to module manager that is used in compiled javascript output
     "module": "CommonJS",
     //location of files for typeScript code
-    "rootDir": "./src",
+    "rootDir": "./",
     //where typeScript code is compiled into javaScript code
     "outDir": "./build",
     //helps to compile commonJs modules into ES6 modules
     "esModuleInterop": true,
     //allows us to further enable strict typing options
     "strict": true
-  }
+  },
+  "exclude": ["client"]
 }
