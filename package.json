@@ -2,7 +2,8 @@
   "name": "tinyhouse-server",
   "version": "0.1.0",
   "engines": {
-    "node": "12.17.0"
+    "node": "12.17.0",
+    "npm": "6.13.6"
   },
   "dependencies": {
     "@google/maps": "^1.1.3",
