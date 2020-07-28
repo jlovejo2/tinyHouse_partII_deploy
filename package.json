@@ -48,7 +48,7 @@
     "start:prod": "node build/index.js",
     "client": "cd client/ && npm run start",
     "build": "cd client && npm run build",
-    "postinstall": "tsc -p ./",
+    "postinstall": "tsc",
     "heroku-postbuild": "npm run build",
     "seed": "ts-node temp/seed.ts",
     "clear": "ts-node temp/clear.ts"
